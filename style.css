@@ -1,0 +1,716 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.carry {
+  /* border: 3px solid red; */
+  width: 100%;
+  margin: auto;
+}
+.hcont {
+  width: 100%;
+  background-image: url("images/221007-american-flag-european-union-flag-ew-1143a-f9ae70.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  /* background-attachment: fixed; */
+}
+.lhead {
+  /* background-color: blue; */
+  /* border: 3px solid green; */
+  width: 40%;
+  float: left;
+}
+.rhead {
+  /* border: 3px solid red; */
+  margin-top: 10px;
+}
+.rhead ul {
+  vertical-align: middle;
+}
+.lhead img {
+  width: 100px;
+  color: white;
+  padding: 5px;
+  text-align: left;
+  margin-left: 100px;
+}
+.rhead {
+  /* background-color: green; */
+  width: 60%;
+  float: left;
+  text-align: center;
+}
+.rhead ul li {
+  display: inline-block;
+}
+.rhead ul li a {
+  padding: 10px;
+  display: inline-block;
+  color: white;
+  position: relative;
+}
+.rhead ul li a::after,
+.rhead ul li a.active::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: royalblue;
+  bottom: 4.5px;
+  right: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.rhead ul li a::after {
+  width: 0%;
+  transition: width 0.5s;
+}
+.rhead ul li a:hover::after {
+  width: 65%;
+}
+.rhead ul li a.active::after {
+  width: 65%;
+}
+.overlay {
+  position: absolute;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.hcontent {
+  /* border: 3px solid red; */
+  width: 60%;
+  letter-spacing: 2px;
+  line-height: 70px;
+  text-transform: capitalize;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+}
+.carrier {
+  position: fixed;
+  /* border: 3px solid green; */
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  z-index: 10;
+  /* border-radius: 0px 0px 5px 5px; */
+}
+.topcont {
+  /* border: 3px solid red; */
+  position: relative;
+}
+.topcont .title {
+  text-align: center;
+  padding: 60px;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+.line {
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: royalblue;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.botcont {
+  width: 80%;
+  margin: auto;
+  /* border: 4px solid blue; */
+}
+.card {
+  border: 1.5px solid rgb(220, 220, 220);
+  /* background-color: rgb(250, 250, 250); */
+  min-width: 30%;
+  max-width: 32%;
+  position: relative;
+  border-radius: 5px;
+  float: left;
+  margin-right: 2%;
+}
+.last {
+  margin-right: 0px;
+}
+.card h3 {
+  text-transform: capitalize;
+  text-align: center;
+  padding: 13px 0 23px 0;
+  font-size: 23px;
+  transition: color 0.3s;
+}
+.card img {
+  border-radius: 50%;
+  margin: 5px auto;
+  display: block;
+  width: 40%;
+}
+.card p {
+  color: gray;
+  font-size: 18px;
+  opacity: 0.8;
+  text-align: center;
+  width: 75%;
+  margin: auto;
+}
+.card a {
+  text-transform: capitalize;
+  display: block;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: royalblue;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: black;
+  transition: width 0.3s;
+  border-radius: 5px;
+  z-index: -1;
+}
+.card:hover::after {
+  width: 100%;
+  color: white;
+}
+.card:hover h3 {
+  color: white;
+}
+.botcont {
+  overflow: auto;
+  /* margin-bottom: 125px; */
+}
+.pcont {
+  height: 100vh;
+  /* border: 3px solid green; */
+}
+.thirdcont {
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+.thirdcontent {
+  /* border: 3px solid blueviolet; */
+  width: 85%;
+  margin: 0px auto 150px auto;
+  overflow: auto;
+}
+.bcard {
+  /* border: 4px solid gold; */
+  width: 45%;
+  float: left;
+}
+.bcard img {
+  border-radius: 5px;
+  width: 100%;
+  height: 300px;
+}
+.bcontento {
+  /* border: 4px solid green; */
+  position: relative;
+}
+.image-effect {
+  border-radius: 5px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+}
+.image-effect .thirdcarry {
+  /* background-color: green; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 45%;
+}
+.image-effect div h2 {
+  opacity: 0;
+  visibility: hidden;
+  padding: 20px;
+  text-transform: capitalize;
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 10px;
+  font-size: 30px;
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+.thirdcarry a {
+  opacity: 0;
+  visibility: hidden;
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+  background-color: black;
+  width: fit-content;
+  margin: auto;
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  top: 10px;
+  transition: all 0.5s;
+  transition-delay: 0.1s;
+}
+.bcontento:hover .image-effect {
+  opacity: 1;
+  visibility: visible;
+}
+.bcontento:hover .thirdcarry a {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.bcontento:hover .thirdcarry h2 {
+  top: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.bet {
+  width: 8%;
+  margin: 120px 1% 0 1%;
+  float: left;
+  /* border: 3px solid red; */
+}
+.fourcont {
+  height: 150vh;
+  /* border: 3px solid green; */
+}
+.lecont .bcontento {
+  float: left;
+}
+.lecont {
+  /* border: 5px solid blue; */
+  height: 40%;
+}
+.ricont {
+  overflow: auto;
+  /* border: 3px solid green; */
+  margin-left: 20px;
+}
+.ricont p {
+  padding: 0px 20px;
+  font-size: larger;
+  line-height: 27px;
+  text-align: justify;
+}
+.leimg,
+.lecont .image-effect {
+  margin-left: 10px;
+}
+
+.euro p {
+  text-align: justify;
+  float: left;
+  width: 50%;
+  padding: 10px 20px;
+  font-size: larger;
+  line-height: 30px;
+}
+.euro .contt {
+  /* border: 3px solid green; */
+  float: right;
+  margin-right: 50px;
+}
+.euro .contt img {
+  /* border: 3px solid red; */
+  height: 35%;
+  border-radius: 5px;
+}
+.fivecont {
+  background-color: #f9f9f9;
+}
+.midcont {
+  /* border: 4px solid blue; */
+  padding-bottom: 50px;
+}
+.midcont img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+  width: 70%;
+}
+.midcont h3 {
+  /* border: 3px solid green; */
+  text-align: center;
+}
+.maincont {
+  /* border: 3px solid red; */
+  overflow: auto;
+}
+.lmain {
+  width: 50%;
+  float: left;
+  /* border: 3px solid red; */
+}
+.maincont .lmain p {
+  font-size: 20px;
+  width: 80%;
+  text-align: justify;
+  padding: 10px;
+  /* border: 3px solid; */
+  text-justify: auto;
+  line-height: 30px;
+  margin: 10px 15px;
+}
+.lmain h2 {
+  padding: 0px 10px;
+  margin: 0px 15px;
+  text-transform: capitalize;
+}
+.maincont .rmain {
+  float: right;
+  width: 50%;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+.rmain > img {
+  width: 20%;
+  float: left;
+  padding: 12px;
+}
+.rmain > p {
+  float: right;
+  width: 80%;
+  text-align: justify;
+  font-size: 20px;
+  padding: 10px;
+  /* border: 3px solid; */
+  text-justify: auto;
+  line-height: 30px;
+}
+.rmain {
+  position: relative;
+}
+.effects {
+  /* border: 2px solid gray; */
+  border-radius: 5px 5px 0 0;
+  display: flow-root;
+  position: absolute;
+  top: 90px;
+  left: 10px;
+  z-index: 1;
+  width: 0%;
+  background-color: green;
+  /* visibility: hidden;
+    opacity: 0; */
+  transition: opacity.3s, visibility 0.3s, width 0.3s;
+}
+.effects img {
+  width: 100%;
+  height: 40%;
+  border-radius: 5px 5px 0px 0px;
+}
+.effects p {
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+  transition: opacity.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.eff:hover + .effects {
+  width: 80%;
+  opacity: 1;
+  visibility: visible;
+}
+.eff:hover + .effects p {
+  opacity: 1;
+  visibility: visible;
+}
+.effectss {
+  /* border: 2px solid gray; */
+  border-radius: 5px 5px 0 0;
+  display: flow-root;
+  position: absolute;
+  top: 330px;
+  z-index: 1;
+  left: 10px;
+  /* height: 40%; */
+  width: 80%;
+  background-color: green;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity.3s, visibility 0.3s, top 0.3s;
+}
+.effectss img {
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+.effectss p {
+  color: white;
+  font-size: 20px;
+  padding: 5px;
+}
+/* br + img {
+    border: 2px solid;
+} */
+br + img:hover + .effectss {
+  top: 320px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.sixcont {
+  min-height: 100vh;
+}
+.topcards {
+  width: 95%;
+  /* border: 3px solid blue; */
+  margin: 10px auto;
+  height: 50%;
+}
+.onncard {
+  border: 1px solid gray;
+  width: 30%;
+  height: 70%;
+  margin: 50px 1%;
+  overflow: auto;
+  border-radius: 5px;
+  position: relative;
+  float: left;
+}
+.onncard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: royalblue;
+  transition: width 0.3s;
+  border-radius: 5px;
+  z-index: -1;
+}
+.onncard:hover {
+  cursor: pointer;
+}
+.onncard:hover::after {
+  width: 100%;
+  color: white;
+}
+.para {
+  color: black;
+  padding: 8px;
+  font-size: 13px;
+  font-style: italic;
+  opacity: 0.8;
+  text-align: justify;
+  transition: color 0.3s;
+}
+.onncard:hover h3 {
+  color: white;
+}
+.onncard:hover .para {
+  color: white;
+}
+.locard img {
+  /* height: 100%; */
+  width: 100%;
+  /* border: 3px solid green; */
+}
+.rocard {
+  width: 50%;
+  float: right;
+  /* border:3px solid red; */
+  height: 100%;
+}
+.rocard h3 {
+  /* border:3px solid blue; */
+  text-transform: capitalize;
+  margin: 10% 5px 0px 5px;
+  transition: color 0.3s;
+}
+.locard {
+  margin-top: 10px;
+  float: left;
+  overflow: auto;
+  width: 50%;
+  /* border: 2px solid red; */
+}
+.svncont {
+  /* border: 3px solid red; */
+  min-height: 40vh;
+  background-image: url("images/221007-american-flag-european-union-flag-ew-1143a-f9ae70.jpg");
+  background-size: cover;
+  background-position: center;
+  /* background-attachment: fixed; */
+  position: relative;
+}
+.gdp {
+  /* border: 2px solid red; */
+  width: 20%;
+  margin-right: 2%;
+  margin-left: 2%;
+  float: left;
+  color: white;
+  margin-top: 35px;
+}
+.gdp img {
+  width: 35%;
+  display: block;
+  margin: auto;
+}
+.black {
+  display: flow-root;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.gdp h2 {
+  text-align: center;
+  /* padding: px; */
+  font-size: 50px;
+}
+.gdp p {
+  text-align: center;
+  font-size: 25px;
+  padding: 3px;
+}
+.atecont {
+  position: relative;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+.bottom-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid gray;
+  border-radius: 5px;
+  min-width: 30%;
+  max-width: 33%;
+  margin-top: 60px;
+}
+.effect-3 {
+  /* border: 3px solid blue; */
+  border-radius: 50%;
+  width: fit-content;
+  position: relative;
+}
+.deffect-3 {
+  position: absolute;
+  width: 40.5%;
+  height: 101%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s, visibility 0.3s, z-index 0.3s;
+}
+.bottom-card img {
+  width: 40%;
+  border: 1px solid gray;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+}
+.bottom-card h2 {
+  text-align: center;
+}
+.links {
+  position: absolute;
+  /* border: 2px solid green; */
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.links a {
+  color: white;
+  font-weight: bold;
+  background-color: royalblue;
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 33%;
+  text-transform: capitalize;
+}
+.bottom-card:hover > img {
+  z-index: -1;
+}
+.bottom-card:hover > .effect-3 > .deffect-3 {
+  z-index: 4;
+  opacity: 1;
+  visibility: visible;
+}
+.bottom-card p {
+  text-align: justify;
+  text-transform: capitalize;
+  font-size: large;
+  transition: color 0.3s;
+  padding: 20px 10px;
+}
+.bottom-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  border-radius: 5px;
+  z-index: -1;
+  background-color: royalblue;
+  transition: height 0.3s;
+}
+.bottom-card:hover::after {
+  height: 100%;
+}
+.titt {
+  color: black;
+  transition: color 0.3s;
+}
+.bottom-card:hover > p {
+  color: white;
+}
+.bottom-card:hover > h2 {
+  color: white;
+}
+.footer {
+  background-color: black;
+  color: white;
+}
+.footer h2 {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 10px;
+  font-size: xx-large;
+}
